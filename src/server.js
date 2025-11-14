@@ -6,6 +6,10 @@ dotenv.config();
 
 const app = express();
 
+app.get("/", (req, res) => {
+  res.send("Server is running & Cron job is active");
+});
+
 // Start cron
 reminderJob.start();
 console.log("Cron job started");
